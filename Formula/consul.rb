@@ -1,7 +1,7 @@
 class Consul < Formula
   desc "Consul"
   homepage "https://www.consul.io"
-  version "1.20.1"
+  version "1.20.2"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://hashicorp-releases.yandexcloud.net/consul/1.20.2/consul_1.20.2_darwin_amd64.zip"
