@@ -46,7 +46,7 @@ class {{ name }} < Formula
   {% endif -%}
   {% if architectures[0].linux_arm -%}
 
-  if OS.linux? && Hardware::CPU.arm? && not Hardware::CPU.is_64_bit?
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
     url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_linux_arm.zip"
     sha256 "{{ architectures[0].linux_arm_sha }}"
   end
