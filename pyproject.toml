@@ -1,0 +1,11 @@
+[project]
+name = "homebrew-hashicorp"
+version = "0.1.0"
+description = "Homebrew Tap for hashicorp Products"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "jinja2>=3.1.5",
+    "python-hcl2>=6.0.0",
+    "requests>=2.32.3",
+]

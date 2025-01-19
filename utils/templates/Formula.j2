@@ -1,0 +1,99 @@
+class {{ name }} < Formula
+  desc "{{ desc }}"
+  homepage "{{ homepage }}"
+  version "{{ version }}"
+
+  {% if architectures[0].darwin_amd64 or architectures[0].darwin_arm64 -%}
+  {% if architectures[0].darwin_amd64 and architectures[0].darwin_arm64 -%}
+
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_darwin_amd64.zip"
+    sha256 "{{ architectures[0].darwin_amd64_sha }}"
+  end
+
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_darwin_arm64.zip"
+    sha256 "{{ architectures[0].darwin_arm64_sha }}"
+  end
+
+  {% else -%}
+
+  if OS.mac?
+    url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_darwin_amd64.zip"
+    sha256 "{{ architectures[0].darwin_amd64_sha }}"
+  end
+
+  if OS.mac? && Hardware::CPU.arm?
+    def caveats
+      <<~EOS
+        The darwin_arm64 architecture is not supported for this product
+        at this time, however we do plan to support this in the future. The
+        darwin_amd64 binary has been installed and may work in
+        compatibility mode, but it is not fully supported.
+      EOS
+    end
+  end
+
+  {% endif -%}
+  {% endif -%}
+  {% if architectures[0].linux_amd64 -%}
+
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_linux_amd64.zip"
+    sha256 "{{ architectures[0].linux_amd64_sha }}"
+  end
+
+  {% endif -%}
+  {% if architectures[0].linux_arm -%}
+
+  if OS.linux? && Hardware::CPU.arm? && not Hardware::CPU.is_64_bit?
+    url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_linux_arm.zip"
+    sha256 "{{ architectures[0].linux_arm_sha }}"
+  end
+
+  {% endif -%}
+  {% if architectures[0].linux_arm64 -%}
+
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://hashicorp-releases.yandexcloud.net/{{ product }}/{{ version }}/{{ product }}_{{ version }}_linux_arm64.zip"
+    sha256 "{{ architectures[0].linux_arm64_sha }}"
+  end
+
+  {% endif -%}
+
+  {%+ for dependency in depends -%}
+  depends_on "{{ dependency }}"
+  {% endfor -%}
+
+
+  {%+ for recommendation in recommends -%}
+  depends_on "{{ recommendation }}" => :recommended
+  {% endfor -%}
+
+
+  {% if variant -%}
+  conflicts_with "{{ product }}-{{ variant }}"
+
+  {% else -%}
+  conflicts_with "{{ product }}"
+
+  {% endif -%}
+
+  def install
+    bin.install "{{ product }}"
+  end
+
+  {% if service_args -%}
+  service do
+    run [bin/"{{ product }}"{% for arg in service_args %}, "{{ arg }}"{% endfor %}]
+    keep_alive successful_exit: false
+    working_dir var
+    log_path var/"log/{{ product }}.log"
+    error_log_path var/"log/{{ product }}.log"
+  end
+  {% endif -%}
+
+  test do
+    system "#{bin}/{{ product }} --version"
+  end
+end
