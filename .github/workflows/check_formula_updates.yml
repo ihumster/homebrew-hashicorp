@@ -1,0 +1,30 @@
+name: Run Formula updates with check product updates
+on:
+  schedule:
+    - cron: "30 4 * * *"
+jobs:
+  update-formulas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: action/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install uv, install requriments and run release_check.py
+        run: |
+          pip install uv
+          uv sync
+          uv run utils/release_check.py
+      - name: Git commit and Publish changes
+        run: |
+          git config user.name Nikitin, Alexander
+          git config user.email alexander@ihumster.ru
+
+          git add Formula/*.rb
+
+          git commit -m "Update formula version"
+
+          git pull --rebase
+
+          git push
