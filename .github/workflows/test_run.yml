@@ -26,8 +26,8 @@ jobs:
 
           git commit -m "Update formula version"
 
-          git pull --rebase
       - name: Publish changes
         continue-on-error: true
         run: |
+          git pull --rebase
           git push
