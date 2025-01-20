@@ -24,7 +24,7 @@ jobs:
 
           git add Formula/*.rb
 
-          git commit -m "Update formula version"
+          git commit -m "Update formula version" || true
 
       - name: Publish changes
         continue-on-error: true
