@@ -17,7 +17,7 @@ jobs:
           pip install uv
           uv sync
           uv run utils/release_check.py
-      - name: Git commit and Publish changes
+      - name: Git commit chaged Formulas
         run: |
           git config user.name Nikitin, Alexander
           git config user.email alexander@ihumster.ru
@@ -27,6 +27,7 @@ jobs:
           git commit -m "Update formula version"
 
           git pull --rebase
-
-          set +e
-          git push || true
+      - name: Publish changes
+        continue-on-error: true
+        run: |
+          git push
