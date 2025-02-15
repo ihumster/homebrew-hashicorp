@@ -1,30 +1,30 @@
 class ConsulTemplate < Formula
   desc "Consul Template"
   homepage "https://github.com/hashicorp/consul-template"
-  version "0.39.1"
+  version "0.40.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.39.1/consul-template_0.39.1_darwin_amd64.zip"
-    sha256 "c06bfdf46a7012c6530b6e3f0382e475d61a5ddeb0d321e1f8cd6ea264b7f355"
+    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.40.0/consul-template_0.40.0_darwin_amd64.zip"
+    sha256 "c1404b8a6fb4de51679a41ccaae309760e28c8816eddaae545afda4a29eccf14"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.39.1/consul-template_0.39.1_darwin_arm64.zip"
-    sha256 "1458d3233ed7cf1d451729a468ee07e37963c462ea11518952b1ac086cd4ed01"
+    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.40.0/consul-template_0.40.0_darwin_arm64.zip"
+    sha256 "f2ce33c6deb5cfd071afd3cd92ac619558f176a5448f37e3c2826b9a74022d96"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.39.1/consul-template_0.39.1_linux_amd64.zip"
-    sha256 "b77c7550defda78c62b036c734e7faceb7f89519dc12406db84f2c3af06bc5fb"
+    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.40.0/consul-template_0.40.0_linux_amd64.zip"
+    sha256 "f73cb36988b9aaccb0ac918df26c854ccd199e60c0df011357405672f3d934bc"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.39.1/consul-template_0.39.1_linux_arm.zip"
-    sha256 "c3f3538ec7297a5c05302c9c2958cf8384c00f164d51205db0fec735d9c6f6bf"
+    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.40.0/consul-template_0.40.0_linux_arm.zip"
+    sha256 "8bd7a06d56ade62deb17f7a3618358e97896be6c162951b3c535a228e074c7a4"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.39.1/consul-template_0.39.1_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul-template/0.40.0/consul-template_0.40.0_linux_arm64.zip"
     sha256 ""
   end
 
