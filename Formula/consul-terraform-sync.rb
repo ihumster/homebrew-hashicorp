@@ -1,11 +1,11 @@
 class ConsulTerraformSync < Formula
   desc "Consul Terraform Sync"
   homepage "https://github.com/hashicorp/consul-terraform-sync"
-  version "0.7.3"
+  version ""
 
   if OS.mac?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.7.3/consul-terraform-sync_0.7.3_darwin_amd64.zip"
-    sha256 "49b9a8c97b5f58a596984bd63faa2628879f73d991ab44012768863f2f671ea4"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync//consul-terraform-sync__darwin_amd64.zip"
+    sha256 ""
   end
 
   if OS.mac? && Hardware::CPU.arm?
@@ -20,17 +20,17 @@ class ConsulTerraformSync < Formula
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.7.3/consul-terraform-sync_0.7.3_linux_amd64.zip"
-    sha256 "d96637f4be2689a0685d824cfe68597ef0ef9cbcc9ef88efe31e6aee1ef4e0fc"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync//consul-terraform-sync__linux_amd64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.7.3/consul-terraform-sync_0.7.3_linux_arm.zip"
-    sha256 "4c79f8f1f748ab64d467f74e70e3a8d5a92fedcea7264c9d31dc8fbc8e8ecc73"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync//consul-terraform-sync__linux_arm.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.7.3/consul-terraform-sync_0.7.3_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync//consul-terraform-sync__linux_arm64.zip"
     sha256 ""
   end
 
