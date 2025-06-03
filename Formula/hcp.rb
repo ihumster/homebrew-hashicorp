@@ -1,30 +1,30 @@
 class Hcp < Formula
   desc "HCP CLI"
   homepage "https://github.com/hashicorp/hcp"
-  version "0.9.1"
+  version "0.10.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/hcp/0.9.1/hcp_0.9.1_darwin_amd64.zip"
-    sha256 "2f3df271461d2f4232111ffc486ae8106bb7b92929db376064915dc3bf1a0ce1"
+    url "https://hashicorp-releases.yandexcloud.net/hcp/0.10.0/hcp_0.10.0_darwin_amd64.zip"
+    sha256 "1440bebd4859920fdeb7118a7da8a84e7680328e24ef5b29f85115b4bd71b162"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/hcp/0.9.1/hcp_0.9.1_darwin_arm64.zip"
-    sha256 "0354485ed1088431813d5eaa232aa99306cdcc96fe990a30c806036203025413"
+    url "https://hashicorp-releases.yandexcloud.net/hcp/0.10.0/hcp_0.10.0_darwin_arm64.zip"
+    sha256 "e054b7499d0c9da432d9bd84782e30e11ca2538f1097ea327710b225225d4eec"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/hcp/0.9.1/hcp_0.9.1_linux_amd64.zip"
-    sha256 "8e9b14e8ca7191f805452674ec622d46118ad09e618f91fd88fa43670b85d2d9"
+    url "https://hashicorp-releases.yandexcloud.net/hcp/0.10.0/hcp_0.10.0_linux_amd64.zip"
+    sha256 "d9f0af27a87c4bf43ab15139985c99a4c70b0e3e37b64d1a97e6978550fb79fe"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/hcp/0.9.1/hcp_0.9.1_linux_arm.zip"
-    sha256 "0bddcdcd094ce91668c2c427d44852ef268d5dc59b07a47860281a4c75522b4a"
+    url "https://hashicorp-releases.yandexcloud.net/hcp/0.10.0/hcp_0.10.0_linux_arm.zip"
+    sha256 "3c9becec5ce1feb9481600bc2b39c71fbed025c3183382478edcaf8dc11425c9"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/hcp/0.9.1/hcp_0.9.1_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/hcp/0.10.0/hcp_0.10.0_linux_arm64.zip"
     sha256 ""
   end
 
