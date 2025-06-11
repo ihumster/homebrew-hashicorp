@@ -1,25 +1,25 @@
 class Nomad < Formula
   desc "Nomad"
   homepage "https://www.nomadproject.io/"
-  version "1.10.1"
+  version "1.10.2"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.1/nomad_1.10.1_darwin_amd64.zip"
-    sha256 "b1485cff769121b786dba35806d7820f4dc4ac5df2e248236f707d2ed6741fcc"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.2/nomad_1.10.2_darwin_amd64.zip"
+    sha256 "89c1d8eeb558009456ecafc5ad11e165f411a9337e04304f9a4c13e863968cb5"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.1/nomad_1.10.1_darwin_arm64.zip"
-    sha256 "3621b5b1f0a0a78f708aa16743f00bb822499fa0451677f685546bbfc5102bff"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.2/nomad_1.10.2_darwin_arm64.zip"
+    sha256 "0927d2b426907847f49ef59b8fd302b5c376151fc8758a9d0e705e11e30c8ff3"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.1/nomad_1.10.1_linux_amd64.zip"
-    sha256 "cc1cffd95d81943d0a7f8abe7dc2b025a644512d1af253456267caebc1f38065"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.2/nomad_1.10.2_linux_amd64.zip"
+    sha256 "f6aa335261637574c00ce39519ab1fede41493d369b2a0eb17052dba830ff8df"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.1/nomad_1.10.1_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.10.2/nomad_1.10.2_linux_arm64.zip"
     sha256 ""
   end
 
