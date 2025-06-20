@@ -1,11 +1,11 @@
 class ConsulAws < Formula
   desc "Consul AWS"
   homepage "https://github.com/hashicorp/consul-aws"
-  version ""
+  version "0.1.3"
 
   if OS.mac?
-    url "https://hashicorp-releases.yandexcloud.net/consul-aws//consul-aws__darwin_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/consul-aws/0.1.3/consul-aws_0.1.3_darwin_amd64.zip"
+    sha256 "41c57011b30233ae972428f2e57f11ee656138b116982bbcb6bf5a3e138e7510"
   end
 
   if OS.mac? && Hardware::CPU.arm?
@@ -20,12 +20,12 @@ class ConsulAws < Formula
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-aws//consul-aws__linux_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/consul-aws/0.1.3/consul-aws_0.1.3_linux_amd64.zip"
+    sha256 "041d14c0219b13f109745bc97818fd235afde2badff6264d9132438d0a03fdf0"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-aws//consul-aws__linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul-aws/0.1.3/consul-aws_0.1.3_linux_arm64.zip"
     sha256 ""
   end
 
