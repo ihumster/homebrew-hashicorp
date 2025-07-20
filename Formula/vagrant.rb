@@ -1,11 +1,11 @@
 class Vagrant < Formula
   desc "Development environment"
   homepage "https://www.vagrantup.com/"
-  version ""
+  version "2.4.7"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/vagrant//vagrant__linux_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/vagrant/2.4.7/vagrant_2.4.7_linux_amd64.zip"
+    sha256 "3ecafba03ff8185b516d45d75abde6a4e1d28379009baaf3614b83449bd9295f"
   end
 
   conflicts_with "vagrant"
