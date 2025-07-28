@@ -1,30 +1,30 @@
 class Consul < Formula
   desc "Consul"
   homepage "https://www.consul.io"
-  version "1.21.3"
+  version ""
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.21.3/consul_1.21.3_darwin_amd64.zip"
-    sha256 "124df50ef2bbeafc33dfe428f67aef26af3ef7f4aa509ff1c98a117a91dd0b59"
+    url "https://hashicorp-releases.yandexcloud.net/consul//consul__darwin_amd64.zip"
+    sha256 ""
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.21.3/consul_1.21.3_darwin_arm64.zip"
-    sha256 "e9d94d3859f0d9a795992433e7c203b06bf0994c54dee7feaff1d1c46a75fd9f"
+    url "https://hashicorp-releases.yandexcloud.net/consul//consul__darwin_arm64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.21.3/consul_1.21.3_linux_amd64.zip"
-    sha256 "ba20631037a5f63f70b0351c0875887a66c0a0d3feac2d255a768c9eb8c95e8b"
+    url "https://hashicorp-releases.yandexcloud.net/consul//consul__linux_amd64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.21.3/consul_1.21.3_linux_arm.zip"
-    sha256 "e5d3572e6196a8c875d5e4ab094a7ab2abecf562d6703f2675cb9cf819cfebb2"
+    url "https://hashicorp-releases.yandexcloud.net/consul//consul__linux_arm.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.21.3/consul_1.21.3_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul//consul__linux_arm64.zip"
     sha256 ""
   end
 
