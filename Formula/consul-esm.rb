@@ -1,30 +1,30 @@
 class ConsulEsm < Formula
   desc "Consul ESM"
   homepage "https://github.com/hashicorp/consul-esm"
-  version "0.9.0"
+  version "0.9.1"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.0/consul-esm_0.9.0_darwin_amd64.zip"
-    sha256 "1e9c900815a49377ed64694ff660f173dc2e6d93ae5cf46918e8868a32211474"
+    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.1/consul-esm_0.9.1_darwin_amd64.zip"
+    sha256 "cdf0c9e7ba7a1381fec15665a2bfae5779ed0b3fc9021b3f9d34006fd1a67dd3"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.0/consul-esm_0.9.0_darwin_arm64.zip"
-    sha256 "9fb254cc9619727ab938dd544937aea73742549acfdf99c4f009e5235f03643c"
+    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.1/consul-esm_0.9.1_darwin_arm64.zip"
+    sha256 "47eca13f82017313585010c08874796dffd165fd50fe96b6935352e8320deab3"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.0/consul-esm_0.9.0_linux_amd64.zip"
-    sha256 "9ed3a3381d451fef8ed2067dec9887962ebb92702650d43a8c85ca3c706372ea"
+    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.1/consul-esm_0.9.1_linux_amd64.zip"
+    sha256 "50d9367be90f542f659bbba9d8ec3510516d995dbb2f522c8618ae75fff31757"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.0/consul-esm_0.9.0_linux_arm.zip"
-    sha256 "a2bedaaba5279530cd2322590716b95948ae9296a023d216053b8bd88f3d0bfe"
+    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.1/consul-esm_0.9.1_linux_arm.zip"
+    sha256 "a8a158f4cb45413abbf082cf3fbe6073e13e3f8eb3eef02328fa554740cf2633"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.0/consul-esm_0.9.0_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul-esm/0.9.1/consul-esm_0.9.1_linux_arm64.zip"
     sha256 ""
   end
 
