@@ -1,30 +1,30 @@
 class Packer < Formula
   desc "Packer"
   homepage "https://www.packer.io/"
-  version "1.14.2"
+  version "1.14.3"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.2/packer_1.14.2_darwin_amd64.zip"
-    sha256 "7ed73a8affcfa81b664b1d47db4eacd43e8038ecf2ae576b40880a64d1c80ba1"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.3/packer_1.14.3_darwin_amd64.zip"
+    sha256 "f76d02dd10d4ded95ba9b970254820d1b081e7d5720e122fd815ab01e80eb6d0"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.2/packer_1.14.2_darwin_arm64.zip"
-    sha256 "b053c01272f87fe669c642dfac167b0b48cfb5c119e2e946d90ef92c2407f746"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.3/packer_1.14.3_darwin_arm64.zip"
+    sha256 "e50aec4714a907db4b8fd7c1a8c92075b8dd801cac420fbd98d0d0e1470a68fe"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.2/packer_1.14.2_linux_amd64.zip"
-    sha256 "cfefdea4ac580eba7b254ef34d25b756d4961741004e3e701a1476594d13e64a"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.3/packer_1.14.3_linux_amd64.zip"
+    sha256 "95041cc0a30f05d5583be26a7c0b715f488e461418ce0c5d88ba204cb092bef1"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.2/packer_1.14.2_linux_arm.zip"
-    sha256 "370002d15b07c0dc47dd0d188cdea8e6746606f6fcc3b4de48d02496d71d74ee"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.3/packer_1.14.3_linux_arm.zip"
+    sha256 "42d920291ff495702004eb941b56143dc3efd9b66743fd949b19156422029847"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.2/packer_1.14.2_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.14.3/packer_1.14.3_linux_arm64.zip"
     sha256 ""
   end
 
