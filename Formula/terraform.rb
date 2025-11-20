@@ -1,30 +1,30 @@
 class Terraform < Formula
   desc "Terraform"
   homepage "https://www.terraform.io/"
-  version "1.13.5"
+  version "1.14.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.13.5/terraform_1.13.5_darwin_amd64.zip"
-    sha256 "92f76865230cbe6bb747e49cb3dc5b44a054324bbdd1a080bb127b326b94c404"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.0/terraform_1.14.0_darwin_amd64.zip"
+    sha256 "bcb92ac63ab038ed633fe99a86553a9f4595d078dd607ad0b0145d7e65d153d1"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.13.5/terraform_1.13.5_darwin_arm64.zip"
-    sha256 "1bf942231235e7e1a4c38c6d7b820e54f526ac487f87d19f0c4a425c6ddb62cb"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.0/terraform_1.14.0_darwin_arm64.zip"
+    sha256 "57fde1cc2534a7e8c48aaae2ad2954084502852c25d731fc957e4b831f75e16e"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.13.5/terraform_1.13.5_linux_amd64.zip"
-    sha256 "0dbe3fcc268eb670801af6a6456799d1ae26e72e73797f6c6167e18aafd1fd9a"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.0/terraform_1.14.0_linux_amd64.zip"
+    sha256 "33ac217458ba8b44ce2813553083bc132c9a07e41a79c2e3627977682d283093"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.13.5/terraform_1.13.5_linux_arm.zip"
-    sha256 "fc1ddcb403fb57e25bdbdceb1ef2b1a102650c01b4d65dd3410082d2ef8b4417"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.0/terraform_1.14.0_linux_arm.zip"
+    sha256 "23d5e9b3f4014f18f85e242a5a8bbaf6d31b058a31d93580e5fe5da644bf8013"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.13.5/terraform_1.13.5_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.0/terraform_1.14.0_linux_arm64.zip"
     sha256 ""
   end
 
