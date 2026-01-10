@@ -1,30 +1,30 @@
 class TerraformLs < Formula
   desc "Terraform Language Server"
   homepage "https://github.com/hashicorp/terraform-ls"
-  version "0.38.3"
+  version ""
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/terraform-ls/0.38.3/terraform-ls_0.38.3_darwin_amd64.zip"
-    sha256 "572986ff273cd2ec811fd3e5a886182d5d97b7ea39d085783195b400b7da1120"
+    url "https://hashicorp-releases.yandexcloud.net/terraform-ls//terraform-ls__darwin_amd64.zip"
+    sha256 ""
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/terraform-ls/0.38.3/terraform-ls_0.38.3_darwin_arm64.zip"
-    sha256 "dab333c067caba930150d9ecb5116fd04e81dfaed09c977d6c9a70cd3aa4903c"
+    url "https://hashicorp-releases.yandexcloud.net/terraform-ls//terraform-ls__darwin_arm64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/terraform-ls/0.38.3/terraform-ls_0.38.3_linux_amd64.zip"
-    sha256 "42be7b55640630baaf62186349e724e59f34281db9665578a427d7692f2864d2"
+    url "https://hashicorp-releases.yandexcloud.net/terraform-ls//terraform-ls__linux_amd64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/terraform-ls/0.38.3/terraform-ls_0.38.3_linux_arm.zip"
-    sha256 "a79d1a9394a8dec68033a129b88c39a29a7cd6e49fe876dccdbd9bcb5fadb390"
+    url "https://hashicorp-releases.yandexcloud.net/terraform-ls//terraform-ls__linux_arm.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/terraform-ls/0.38.3/terraform-ls_0.38.3_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/terraform-ls//terraform-ls__linux_arm64.zip"
     sha256 ""
   end
 
