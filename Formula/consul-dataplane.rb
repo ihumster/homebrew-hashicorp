@@ -1,30 +1,30 @@
 class ConsulDataplane < Formula
   desc "Consul Dataplane"
   homepage "https://github.com/hashicorp/consul-dataplane"
-  version ""
+  version "1.9.2"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane//consul-dataplane__darwin_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane/1.9.2/consul-dataplane_1.9.2_darwin_amd64.zip"
+    sha256 "ac38f98ce1b023c76e4e3024999426e7486eb363a96fc168c0246f6470e75736"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane//consul-dataplane__darwin_arm64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane/1.9.2/consul-dataplane_1.9.2_darwin_arm64.zip"
+    sha256 "231708b5a0c222739482889756dc9c83c3cb55f7111d819fe4e84070f8b4b0b5"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane//consul-dataplane__linux_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane/1.9.2/consul-dataplane_1.9.2_linux_amd64.zip"
+    sha256 "4cc8c7df29a750f674eca80e447b6f0671a68c7daad110e0cc3056f827904cd8"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane//consul-dataplane__linux_arm.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane/1.9.2/consul-dataplane_1.9.2_linux_arm.zip"
+    sha256 "4ba5eae58e554662fcca91406f412f61409b327ed40a644fc0ca6cbc5547af60"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane//consul-dataplane__linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul-dataplane/1.9.2/consul-dataplane_1.9.2_linux_arm64.zip"
     sha256 ""
   end
 
