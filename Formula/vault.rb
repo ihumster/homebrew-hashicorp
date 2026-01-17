@@ -1,30 +1,30 @@
 class Vault < Formula
   desc "Vault"
   homepage "https://www.vaultproject.io"
-  version "1.21.2"
+  version ""
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/vault/1.21.2/vault_1.21.2_darwin_amd64.zip"
-    sha256 "1bb297df6230212764f24df88b3123419c49be6528743cffcaf8d676547634dc"
+    url "https://hashicorp-releases.yandexcloud.net/vault//vault__darwin_amd64.zip"
+    sha256 ""
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/vault/1.21.2/vault_1.21.2_darwin_arm64.zip"
-    sha256 "d197adcb303cb527834774e19d6a67abcefb11cc9c57bd42f5bcdd4a1b21be9c"
+    url "https://hashicorp-releases.yandexcloud.net/vault//vault__darwin_arm64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/vault/1.21.2/vault_1.21.2_linux_amd64.zip"
-    sha256 "d2005a053a2ab75318d395ca8151aef9116fde67f75dc8f43a4fa9def6f3fc9e"
+    url "https://hashicorp-releases.yandexcloud.net/vault//vault__linux_amd64.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/vault/1.21.2/vault_1.21.2_linux_arm.zip"
-    sha256 "27dc55533a201be4c427319a31caa3ca330cfd40b158d111f22a1dee94ae1f17"
+    url "https://hashicorp-releases.yandexcloud.net/vault//vault__linux_arm.zip"
+    sha256 ""
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/vault/1.21.2/vault_1.21.2_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/vault//vault__linux_arm64.zip"
     sha256 ""
   end
 
