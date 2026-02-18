@@ -1,30 +1,30 @@
 class Boundary < Formula
   desc "Boundary"
   homepage "https://www.boundaryproject.io/"
-  version ""
+  version "0.21.1"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/boundary//boundary__darwin_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/boundary/0.21.1/boundary_0.21.1_darwin_amd64.zip"
+    sha256 "d090ef8db6df84565f9f3eeb3fc7d24a2b4f8fff061b26eaae38c008ada3ba0c"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/boundary//boundary__darwin_arm64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/boundary/0.21.1/boundary_0.21.1_darwin_arm64.zip"
+    sha256 "fa74d345c71bfa480086815fe2ffe97285cbe5789325e0911f7b36275849e28a"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/boundary//boundary__linux_amd64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/boundary/0.21.1/boundary_0.21.1_linux_amd64.zip"
+    sha256 "ab9f2b2a7624ecd351a9e6f3ef85e61e37eaa3665a6e38a4036b3486e925f8b4"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/boundary//boundary__linux_arm.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/boundary/0.21.1/boundary_0.21.1_linux_arm.zip"
+    sha256 "623c773b71a086ca728d20a19e4ce5386c5a0b1d1ef95af97da49a7965c47696"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/boundary//boundary__linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/boundary/0.21.1/boundary_0.21.1_linux_arm64.zip"
     sha256 ""
   end
 
