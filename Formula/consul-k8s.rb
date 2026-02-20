@@ -1,30 +1,30 @@
 class ConsulK8s < Formula
   desc "Consul K8s"
   homepage "https://github.com/hashicorp/consul-k8s"
-  version "1.7.10"
+  version "1.9.3"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.7.10/consul-k8s_1.7.10_darwin_amd64.zip"
-    sha256 "d03efa063d144a0c39f6e378af4f0aece8d474c3c51804b46d1be6141f0e49e2"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.9.3/consul-k8s_1.9.3_darwin_amd64.zip"
+    sha256 "f4134e87a5d7ee465cf67695ec8946a5d9b4fa7f52ac135c40f96f7db326f242"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.7.10/consul-k8s_1.7.10_darwin_arm64.zip"
-    sha256 "19eea53e090fb3cf74a4f8dfa7a0afc399377995d0fc1e26190e365c9e9b54a5"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.9.3/consul-k8s_1.9.3_darwin_arm64.zip"
+    sha256 "fdb2371ef617daa278b16383963c637e88345b170926b749b12d7174531625f8"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.7.10/consul-k8s_1.7.10_linux_amd64.zip"
-    sha256 "4e780951dc3c829415488a5eed128437670ad7dce41c10f98b70099bc8d8b675"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.9.3/consul-k8s_1.9.3_linux_amd64.zip"
+    sha256 "bc1de3c679113d4ddb8acd655d07cc5ba6e000b6a5b9833fcb21083a75e9432d"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.7.10/consul-k8s_1.7.10_linux_arm.zip"
-    sha256 "7cef6138c653daa65080cfd6edb3bc01a674a60cbfa0e5de7e4214f8c1f8b517"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.9.3/consul-k8s_1.9.3_linux_arm.zip"
+    sha256 "7aa7b3c736c566cc36ce55ab28be5051884500babf0aa32bee74b7a96b77910c"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.7.10/consul-k8s_1.7.10_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.9.3/consul-k8s_1.9.3_linux_arm64.zip"
     sha256 ""
   end
 
