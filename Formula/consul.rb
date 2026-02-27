@@ -1,30 +1,30 @@
 class Consul < Formula
   desc "Consul"
   homepage "https://www.consul.io"
-  version "1.22.4"
+  version "1.22.3"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.4/consul_1.22.4_darwin_amd64.zip"
-    sha256 "2443229fd5146361f8f95b8ab0901d0105d482128d848964c95fc441b2688d41"
+    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.3/consul_1.22.3_darwin_amd64.zip"
+    sha256 "e4663e1ac1b6171d7f9439121009c930068c2499cfba12e3fcb2e28fdac07b41"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.4/consul_1.22.4_darwin_arm64.zip"
-    sha256 "b14c637e1e83b822942c9ce7922efbad8fb5fe0cea55022abe31bf64e2f56383"
+    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.3/consul_1.22.3_darwin_arm64.zip"
+    sha256 "b2881e2f9c6704fdac53d54dfb3957bf0d280600541a8e8f61d807e96ea7efa0"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.4/consul_1.22.4_linux_amd64.zip"
-    sha256 "34c6376d40752118e4a09564c18191da6226f8c38019f0cf4cc7d963d75c6d9c"
+    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.3/consul_1.22.3_linux_amd64.zip"
+    sha256 "0942ef6ed43522adfb4cddbefea2f0e64306318afb8aeab3727563f0caef04be"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.4/consul_1.22.4_linux_arm.zip"
-    sha256 "34f32e1d751575264554010f970a178e503baccd391c206c9e91d08247c71610"
+    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.3/consul_1.22.3_linux_arm.zip"
+    sha256 "ee6f8bee5290c98ad64be28e5a8865a1a299f62b4edd19e8428e3cde9ad58ffa"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.4/consul_1.22.4_linux_arm64.zip"
+    url "https://hashicorp-releases.yandexcloud.net/consul/1.22.3/consul_1.22.3_linux_arm64.zip"
     sha256 ""
   end
 
