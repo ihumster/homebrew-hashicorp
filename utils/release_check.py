@@ -46,15 +46,15 @@ def get_product_sha256(product, version):
         if response.status_code == 200:
             for line in response.iter_lines():
                 sum, file = line.decode("utf-8").split("  ")
-                if "darwin_amd64" in file:
+                if "darwin_amd64." in file:
                     ret_dict.update({"darwin_amd64_sha": sum})
-                elif "darwin_arm64" in file:
+                elif "darwin_arm64." in file:
                     ret_dict.update({"darwin_arm64_sha": sum})
-                elif "linux_amd64" in file:
+                elif "linux_amd64." in file:
                     ret_dict.update({"linux_amd64_sha": sum})
-                elif "linux_arm" in file:
+                elif "linux_arm." in file:
                     ret_dict.update({"linux_arm_sha": sum})
-                elif "linux_arm64" in file:
+                elif "linux_arm64." in file:
                     ret_dict.update({"linux_arm64_sha": sum})
 
         return ret_dict
