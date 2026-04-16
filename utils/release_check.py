@@ -99,19 +99,24 @@ def main():
             latest_release_version = get_latest_release(product["name"])
             if not product["version"] or product["version"] != latest_release_version:
                 productConfig = get_hcl_config(product["name"], config)
+                if not productConfig:
+                    print(f"[WARN] No HCL config found for '{product['name']}'")
                 productShaDict = get_product_sha256(
                     product["name"], latest_release_version
                 )
+                if not productShaDict:
+                    print(
+                        f"[WARN] No SHA256 found for '{product['name']}' v{latest_release_version}"
+                    )
                 if productConfig and productShaDict:
                     productConfig["architectures"][0].update(productShaDict)
                     productConfig.update({"version": latest_release_version})
+                    rendered_content = template.render(productConfig)
+                    with open(product["file_path"], "w", encoding="utf-8") as out_file:
+                        out_file.write(rendered_content)
                 else:
                     print(f"Error getting config or sha256 for '{product['name']}'")
                     # break
-
-                rendered_content = template.render(productConfig)
-                with open(product["file_path"], "w", encoding="utf-8") as out_file:
-                    out_file.write(rendered_content)
 
     else:
         print("Error loading hashicorp hcl config")
