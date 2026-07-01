@@ -1,31 +1,31 @@
 class Terraform < Formula
   desc "Terraform"
   homepage "https://www.terraform.io/"
-  version "1.14.8"
+  version "1.15.7"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.8/terraform_1.14.8_darwin_amd64.zip"
-    sha256 "26dd7593d22e9d99ec09380f0869718f649be7b7f954d888611335e6a84961f8"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.15.7/terraform_1.15.7_darwin_amd64.zip"
+    sha256 "7f7a055e4d0c9dddb19cb14058fc885df139fdd4e987fffff6bf82993ac6a1a3"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.8/terraform_1.14.8_darwin_arm64.zip"
-    sha256 "5593670a2d42323847bfb216db17c73a44df201a62f7587928bae16adeabba23"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.15.7/terraform_1.15.7_darwin_arm64.zip"
+    sha256 "711791bf41365137a9a4adbf3e4c4a18dd7389d45c6a3039e3c6946bc750080e"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.8/terraform_1.14.8_linux_amd64.zip"
-    sha256 "56a5d12f47cbc1c6bedb8f5426ae7d5df984d1929572c24b56f4c82e9f9bf709"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.15.7/terraform_1.15.7_linux_amd64.zip"
+    sha256 "73bbb8f5188ad75d4fb853fd100ae4d7e146ef7af7db18776109642fdb7759d2"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.8/terraform_1.14.8_linux_arm.zip"
-    sha256 "c953171cde6b25ca0448c3b29a90d2f46c0310121e18742ec8f89631768e770c"
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.15.7/terraform_1.15.7_linux_arm.zip"
+    sha256 "be34a411ff07ffd286671e15d0f12aeeea403b64fec2f626990742f0984f37af"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/terraform/1.14.8/terraform_1.14.8_linux_arm64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/terraform/1.15.7/terraform_1.15.7_linux_arm64.zip"
+    sha256 "7a9e92105ede978cf9049a2fbe53dfe67c6a8da4b4d7f613d89e7dd7c63ec40d"
   end
 
   conflicts_with "terraform"

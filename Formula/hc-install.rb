@@ -1,31 +1,31 @@
 class HcInstall < Formula
   desc "hc-install CLI"
   homepage "https://github.com/hashicorp/hc-install"
-  version "0.9.3"
+  version "0.9.5"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.3/hc-install_0.9.3_darwin_amd64.zip"
-    sha256 "4c10e23ec131fa475080d8d328c839c04dda6d615f4ef4362c44de6cee7d9a60"
+    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.5/hc-install_0.9.5_darwin_amd64.zip"
+    sha256 "08fd94c229a2ed657badbb9238c74506c525c25b0081254b4dd0639e4bea860e"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.3/hc-install_0.9.3_darwin_arm64.zip"
-    sha256 "4e9084b36ef2940d69f85e8060d2e372b59b3063acc6b44c144e9129e2aca427"
+    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.5/hc-install_0.9.5_darwin_arm64.zip"
+    sha256 "211fff76e23a6f02323bfe69c30956e2e44eb75b6cbef47118af5b5f828f502c"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.3/hc-install_0.9.3_linux_amd64.zip"
-    sha256 "9582a216c20b21e9fe199706f2b7dcacdb3425b2cc3f1ae9759f0f880128b37f"
+    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.5/hc-install_0.9.5_linux_amd64.zip"
+    sha256 "da74908a2ddb242436a327956b87d1bb87f9a6081ef6d38354bb0d7ac67a0465"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.3/hc-install_0.9.3_linux_arm.zip"
-    sha256 "3660e8ba69793450c73b47676153fc8c241abe86f97796ce8f6f26a27cb07f54"
+    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.5/hc-install_0.9.5_linux_arm.zip"
+    sha256 "7ff8561fc12a3eab99b296cb6b203a23e877d514a2753e648f4b28c6fe242756"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.3/hc-install_0.9.3_linux_arm64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/hc-install/0.9.5/hc-install_0.9.5_linux_arm64.zip"
+    sha256 "8e05d5526e796f2fa945b41570541a40dff4a3af6cd081744e04c728d7d62f52"
   end
 
   conflicts_with "hc-install"

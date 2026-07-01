@@ -1,31 +1,31 @@
 class Packer < Formula
   desc "Packer"
   homepage "https://www.packer.io/"
-  version "1.15.1"
+  version "1.15.4"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.1/packer_1.15.1_darwin_amd64.zip"
-    sha256 "b574a86fae94f097cfce1b49830efa35071125496b6ca6f4f4665c5a7717d55d"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.4/packer_1.15.4_darwin_amd64.zip"
+    sha256 "b3be60b44dcb74e7962afe22cc10b89a09c74b626fcd52f49ecee32b07b99e71"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.1/packer_1.15.1_darwin_arm64.zip"
-    sha256 "dc7101854964dce31d379f9a66a1b3256381242dd670dcad25add6f2f299d934"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.4/packer_1.15.4_darwin_arm64.zip"
+    sha256 "d95ba177dd2ebb84d7d155493b4188ec2a519d2c3b041528db5b63a6aff9da80"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.1/packer_1.15.1_linux_amd64.zip"
-    sha256 "648d704bec73805a5508ed612185a9e5858ca7d57b730b88b1a54c3af3a91f5f"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.4/packer_1.15.4_linux_amd64.zip"
+    sha256 "15f97a6a99645c7d5308c609973b5280837b38e112beac413ccbce80da927cf1"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.1/packer_1.15.1_linux_arm.zip"
-    sha256 "a8d68f1746ecacaf8fa9d364aa086249958a0a1f67c90b8a4f165ff024c0e58e"
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.4/packer_1.15.4_linux_arm.zip"
+    sha256 "b4830f7963fc34de7281e1d3a6e5dbb1d492334237f9247ec8dd2b13c552a409"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.1/packer_1.15.1_linux_arm64.zip"
-    sha256 ""
+    url "https://hashicorp-releases.yandexcloud.net/packer/1.15.4/packer_1.15.4_linux_arm64.zip"
+    sha256 "23e6d2e596dd9e2527e0f7bea9aedd26059729375a0d17c462c2621f1b97b82d"
   end
 
   conflicts_with "packer"
