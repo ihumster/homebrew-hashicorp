@@ -12,6 +12,25 @@ template_path = "utils/templates"
 env = Environment(loader=FileSystemLoader(template_path), trim_blocks=True)
 template = env.get_template("Formula.j2")
 
+github_token = os.environ.get("GITHUB_TOKEN")
+github_headers = {"Authorization": f"Bearer {github_token}"} if github_token else {}
+
+
+def unquote(value):
+    """Strip surrounding double quotes returned by python-hcl2 >= 4.x.
+
+    Newer python-hcl2 keeps the literal quotes around string values (e.g.
+    '"boundary"'), which breaks equality checks and template rendering. This
+    recursively removes them from strings inside dicts and lists.
+    """
+    if isinstance(value, str) and len(value) >= 2 and value[0] == '"' and value[-1] == '"':
+        return value[1:-1]
+    if isinstance(value, list):
+        return [unquote(item) for item in value]
+    if isinstance(value, dict):
+        return {key: unquote(item) for key, item in value.items()}
+    return value
+
 
 def load_hcl_config():
     url = "https://raw.githubusercontent.com/hashicorp/homebrew-tap/refs/heads/master/util/formula_templater/config.hcl"
@@ -21,14 +40,14 @@ def load_hcl_config():
     config = None
 
     if response.status_code == 200:
-        config = hcl2.loads(response.text)
+        config = unquote(hcl2.loads(response.text))
     return config
 
 
 def get_latest_release(repo, owner=owner):
     url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
 
-    response = requests.get(url)
+    response = requests.get(url, headers=github_headers)
 
     if response.status_code == 200:
         release_date = response.json()
