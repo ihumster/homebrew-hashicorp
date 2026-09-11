@@ -1,31 +1,31 @@
 class ConsulK8s < Formula
   desc "Consul K8s"
   homepage "https://github.com/hashicorp/consul-k8s"
-  version "2.0.3"
+  version "1.8.17"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/2.0.3/consul-k8s_2.0.3_darwin_amd64.zip"
-    sha256 "281f6b4b73bcc05240a645b6e11bf579954fbfe58571b7daebfe241e8a4dbef2"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.8.17/consul-k8s_1.8.17_darwin_amd64.zip"
+    sha256 "eb6366f1789e0f514909ddcdb3d10af66dfecca14f83e62a56f1979f679e9a48"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/2.0.3/consul-k8s_2.0.3_darwin_arm64.zip"
-    sha256 "86e54668db0cf8204415e1314d487f6f45259b43b6d938e70450166a0f8628b5"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.8.17/consul-k8s_1.8.17_darwin_arm64.zip"
+    sha256 "0bde8c88c4ac5e580712ed732da61c2dbf887f5c7c03fedb1041d4d4c3710a74"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/2.0.3/consul-k8s_2.0.3_linux_amd64.zip"
-    sha256 "60eeeb99b4337623a82c5197a86e31362b50a885496d8c55fd246e6dbe6994f0"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.8.17/consul-k8s_1.8.17_linux_amd64.zip"
+    sha256 "7fc485448a7fef7266df12489203b38f085c48a39ce8fcb58abb94cae7b7f99d"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/2.0.3/consul-k8s_2.0.3_linux_arm.zip"
-    sha256 "93f0a7dace3f219f5229bddbf0342ce51d30d9d51968bcd6fd30cf0238dd0c86"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.8.17/consul-k8s_1.8.17_linux_arm.zip"
+    sha256 "5fcef82d2cfa022291f4c93dff726e14461fc22a0887cfe2e8da68409081a421"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/2.0.3/consul-k8s_2.0.3_linux_arm64.zip"
-    sha256 "3f7c13796db4b168aaa3f2a791d4cfd1720868b52727fe626b74ebfbe7eaaddf"
+    url "https://hashicorp-releases.yandexcloud.net/consul-k8s/1.8.17/consul-k8s_1.8.17_linux_arm64.zip"
+    sha256 "88a74f68b3c703336197fef789f1ba0b8609317fb29b60a8f0f6890c2fd53542"
   end
 
   conflicts_with "consul-k8s"
