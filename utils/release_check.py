@@ -33,14 +33,19 @@ def unquote(value):
 
 
 def load_hcl_config():
-    url = "https://raw.githubusercontent.com/hashicorp/homebrew-tap/refs/heads/master/util/formula_templater/config.hcl"
+    url = "https://raw.githubusercontent.com/hashicorp/homebrew-tap/refs/heads/main/util/formula_templater/config.hcl"
 
-    response = requests.get(url)
-
-    config = None
-
-    if response.status_code == 200:
+    try:
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+    except requests.RequestException as exc:
+        raise RuntimeError(f"Failed to fetch HashiCorp formula config from {url}: {exc}") from exc
+    try:
         config = unquote(hcl2.loads(response.text))
+    except Exception as exc:
+        raise RuntimeError(f"Invalid HashiCorp formula config from {url}: {exc}") from exc
+    if not isinstance(config, dict) or not isinstance(config.get("formula"), list) or not config["formula"]:
+        raise RuntimeError(f"No formula entries in HashiCorp formula config from {url}")
     return config
 
 
@@ -137,8 +142,6 @@ def main():
                     print(f"Error getting config or sha256 for '{product['name']}'")
                     # break
 
-    else:
-        print("Error loading hashicorp hcl config")
 
 
 if __name__ == "__main__":
