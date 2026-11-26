@@ -1,11 +1,11 @@
 class ConsulTerraformSync < Formula
   desc "Consul Terraform Sync"
   homepage "https://github.com/hashicorp/consul-terraform-sync"
-  version "0.9.1"
+  version "0.10.0"
 
   if OS.mac?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.9.1/consul-terraform-sync_0.9.1_darwin_amd64.zip"
-    sha256 "9004d6808e8b6c3f44cde4701c45ae9f0643503ef7ffee96a3c14ef47189a116"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.10.0/consul-terraform-sync_0.10.0_darwin_amd64.zip"
+    sha256 "bf1715dcbab1d8ec785dc7d36a4567b29e8facd32b3e65731848b8cca940346f"
   end
 
   if OS.mac? && Hardware::CPU.arm?
@@ -20,18 +20,18 @@ class ConsulTerraformSync < Formula
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.9.1/consul-terraform-sync_0.9.1_linux_amd64.zip"
-    sha256 "4536c56a7d8e6e18f9cd4915d70690b27eec95037e9e5f1d1f764b92da5bd4e3"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.10.0/consul-terraform-sync_0.10.0_linux_amd64.zip"
+    sha256 "60368bf2402681870a9d5e324e51ba98c7c98ac902f790f5f98a91525b663e18"
   end
 
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.9.1/consul-terraform-sync_0.9.1_linux_arm.zip"
-    sha256 "ab799fa142b83634deaad63d98c984878f50f1c67c9d345e4b736d5c2e3eaebe"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.10.0/consul-terraform-sync_0.10.0_linux_arm.zip"
+    sha256 "1b6a448273916ac0e45ddb8060da80c01970675fa1f487973880eb177f396656"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.9.1/consul-terraform-sync_0.9.1_linux_arm64.zip"
-    sha256 "e5e93554cf0789f4513078711abe93bb71d5536f8bb722e950fe051f9bde1043"
+    url "https://hashicorp-releases.yandexcloud.net/consul-terraform-sync/0.10.0/consul-terraform-sync_0.10.0_linux_arm64.zip"
+    sha256 "734451fe73705a6b2417fe18cc00e7be7c83688b68382891c0369389f09f9f4c"
   end
 
   conflicts_with "consul-terraform-sync"
